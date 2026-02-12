@@ -1,0 +1,40 @@
+let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+// Adicionar ao carrinho
+function addToCart(productName, price) {
+    cart.push({ name: productName, price: price });
+    localStorage.setItem("cart", JSON.stringify(cart));
+    alert("Produto adicionado ao carrinho");
+}
+
+// Mostrar carrinho
+function loadCart() {
+    let container = document.getElementById("cart-list");
+    let total = 0;
+
+    container.innerHTML = cart.map((item, index) => {
+        total += item.price;
+        return `
+            <li style="margin-bottom:10px;">
+                ${item.name} — €${item.price.toFixed(2)}
+                <button onclick="removeItem(${index})" style="
+                    margin-left:10px;
+                    padding:4px 10px;
+                    background:#d4af37;
+                    border:none;
+                    border-radius:4px;
+                    cursor:pointer;
+                ">Remover</button>
+            </li>
+        `;
+    }).join("");
+
+    document.getElementById("total").innerText = total.toFixed(2);
+}
+
+// Remover item
+function removeItem(index) {
+    cart.splice(index, 1);
+    localStorage.setItem("cart", JSON.stringify(cart));
+    loadCart();
+}
