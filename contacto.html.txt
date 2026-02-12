@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto — LuxWear</title>
+    <link rel="stylesheet" href="css/estilo.css">
+    <script src="js/script.js" defer></script>
+</head>
+
+<body>
+
+<header>
+    <h1>LuxWear</h1>
+    <nav>
+        <a href="index.html">Início</a>
+        <a href="catalogo.html">Coleção</a>
+        <a href="sobre.html">Sobre</a>
+        <a href="contacto.html">Contacto</a>
+        <a href="carrinho.html">Carrinho</a>
+    </nav>
+</header>
+
+<section class="hero">
+    <h2>Fale Connosco</h2>
+    <p>Estamos aqui para ajudar em tudo o que precisar.</p>
+</section>
+
+<section style="max-width:700px; margin:60px auto; padding:20px;">
+    <form>
+        <label>Nome</label>
+        <input type="text" required>
+
+        <label>Email</label>
+        <input type="email" required>
+
+        <label>Mensagem</label>
+        <textarea required></textarea>
+
+        <button class="btn" type="submit">Enviar Mensagem</button>
+    </form>
+</section>
+
+<footer>
+    © 2026 — LuxWear | Demonstração de Portfólio
+</footer>
+
+</body>
+</html>
